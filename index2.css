@@ -1,0 +1,437 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4 url('https://images.squarespace-cdn.com/content/v1/51015c9ae4b00028821bf751/1614248312706-VXWB9EW0X41AFGSOJ9MS/WEB-DESIGN-2.png') center/cover no-repeat;
+    color: #f7f3f3;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Header Styles with Gradient */
+  header {
+    background: linear-gradient(135deg, rgba(68, 139, 255, 0.6), rgba(255, 137, 255, 0.6)), url('https://media.gettyimages.com/id/1207524102/vector/job-and-resume-seamless-pattern-and-background-with-line-icons-editable-stroke.jpg?s=612x612&w=gi&k=20&c=n3zstER-gdkmy66KmjXsH_Q7bMPSSwIK4cAswsgor08=') center/cover;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  header:hover {
+    background: linear-gradient(135deg, #8b70e6, #efaab6), url('https://media.istockphoto.com/id/1279104620/photo/top-view-of-a-white-desktop-concept-job-search.jpg?s=612x612&w=0&k=20&c=Ow_kvA2wQ4rLlqX_oFHgpjLb1JMKyPQKLOPzbu6w6qw=');
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Navigation Bar Styles */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(135deg, rgba(68, 139, 255, 0.6), rgba(255, 137, 255, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvNzQygDp6RXmksmCFlhhxRM-6S-CNFHeUtg&s') center/cover;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(166, 154, 236, 0.1);
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0d74cc, #8c5eff);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(166, 154, 236, 0.2);
+  }
+  
+  nav a:hover {
+    background: linear-gradient(135deg, #ff7c89, #ff49db);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(238, 234, 234, 0.2);
+  }
+  
+  nav a:active {
+    transform: translateY(2px);
+    box-shadow: 0 5px 10px rgba(218, 218, 234, 0.32);
+  }
+  
+  /* Job Listings Section */
+  #job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  #job-listings::before {
+    content: "Job Listings";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #4c74af, #3f66a0);
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  #job-listings::before:hover {
+    transform: scale(1.05);
+    color: #f4f4f4;
+  }
+  
+  /* Job Card Styles */
+  .job-card {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .job-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+  }
+  
+  /* Ensure job images are the same size */
+  .job-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .job-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  .job-card h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .job-card p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Job Card Buttons Styling */
+  .job-card button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Apply Button */
+  .apply-button {
+    background: linear-gradient(45deg, #FFB6C1, #FF69B4); /* Pastel pink to hot pink gradient */
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4); /* Soft shadow for pastel pink */
+    cursor: pointer;
+  }
+  
+  .apply-button:hover {
+    background: linear-gradient(45deg, #FF85C0, #FF1493); /* Darker pink on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6); /* Glowing effect on hover */
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255, 105, 180, 0.6); /* Glowing text effect */
+  }
+  
+  .apply-button:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    text-shadow: 0 0 4px rgba(255, 105, 180, 0.5); /* Glowing text effect when clicked */
+  }
+  
+  /* Save Button */
+  .save-button {
+    background: linear-gradient(45deg, #B3E5FC, #80D6FF); /* Pastel blue gradient */
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 191, 255, 0.3); /* Soft shadow for pastel blue */
+    cursor: pointer;
+  }
+  
+  .save-button:hover {
+    background: linear-gradient(45deg, #80D6FF, #03A9F4); /* More intense blue on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 191, 255, 0.6); /* Glowing effect on hover */
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(0, 191, 255, 0.6); /* Glowing text effect */
+  }
+  
+  .save-button:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.3);
+    text-shadow: 0 0 4px rgba(0, 191, 255, 0.5); /* Glowing text effect when clicked */
+  }
+  
+  
+  /* Optional: Add some spacing between job cards */
+  .job-card {
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  
+  /* Job Form Container */
+  .job-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-form-container h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    margin-bottom: 20px;
+  }
+  
+  .form-row label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .form-row input,
+  .form-row textarea {
+    padding: 12px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .form-row input[type="text"],
+  .form-row input[type="email"] {
+    height: 40px;
+  }
+  
+  .form-row textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    padding: 10px;
+    font-size: 1em;
+    background: linear-gradient(135deg, #9e815c, #8cd8e7);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  button[type="submit"]:hover {
+    background: linear-gradient(135deg, #91caed, #ec66c2);
+    transform: translateY(-5px);
+  }
+  
+  button[type="submit"]:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer Section */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  footer p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  footer a {
+    color: #ff7c89;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Styling for the buttons */
+  button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Styling for the button */
+  button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    background: linear-gradient(135deg, #b0b0b0, #d3d3d3); /* Silver gradient */
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #a0a0a0, #c0c0c0); /* Darker silver gradient */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) scale(1.1);
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: pulse 1.2s infinite ease-in-out;
+  }
+  
+  button:active {
+    background: linear-gradient(135deg, #909090, #b0b0b0);
+    transform: translateY(2px);
+  }
+  
+  /* Pop-Up Styling */
+  .pop-up {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better focus */
+    z-index: 9999; /* Ensure it overlays other content */
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease-out; /* Fade-in animation */
+  }
+  
+  /* Pop-up Content Styling */
+  .pop-up-content {
+    background: linear-gradient(135deg, #ff7c89, #ff49db); /* Gradient background */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 450px;
+    max-width: 90%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    animation: slideUp 0.5s ease-out; /* Slide-up animation */
+    transform: scale(0.95);
+  }
+  
+  /* Pop-up Header */
+  .pop-up h3 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+  }
+  
+  /* Pop-up Paragraph */
+  .pop-up p {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: white;
+    line-height: 1.6;
+  }
+  
+  /* Close Button Styling */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .close:hover {
+    color: #ff49db; /* Pinkish glow on hover */
+  }
+  
+  /* Pop-Up Fade-In Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Pop-Up Slide-Up Animation */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(30px) scale(0.9);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Button to show the pop-up */
+  button:focus + .pop-up {
+    display: flex;
+    animation: fadeIn 0.5s ease-out forwards, slideUp 0.5s ease-out forwards;
+  }
+  
