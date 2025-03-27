@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index3.css">
+    <title>Online Quiz Maker</title>
+</head>
+<body>
+    <header>
+        <h1>MindSpark Quiz Maker</h1>
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('howToCreate')">How to Create</button>
+            <button onclick="showSection('sampleQuiz')">Sample Quiz</button>
+            <button onclick="showSection('createQuiz')">Create Quiz</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content">
+        <div class="content">
+            <h2>Welcome to MindSpark!</h2>
+            <p>Your ultimate platform for creating and taking quizzes. Start now to challenge your mind!</p>
+            <img src="https://cdn.pixabay.com/photo/2020/09/23/07/53/quiz-5595288_1280.jpg" alt="Welcome Image">
+            <p>Our features include personalized quizzes, progress tracking, and much more.</p>
+        </div>
+            <!-- Login Section -->
+            <div id="login" class="auth-section">
+                <h3>Login</h3>
+                <form id="loginForm">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#" onclick="toggleAuth('register')">Register</a></p>
+            </div>
+
+            <!-- Registration Section -->
+            <div id="register" class="auth-section hidden">
+                <h3>Register</h3>
+                <form id="registerForm">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="#" onclick="toggleAuth('login')">Login</a></p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content hidden">
+            <h2>About MindSpark</h2>
+            <p>MindSpark is a fun and interactive platform designed to make learning exciting. Whether you're a student looking to test your knowledge or someone just looking for a fun way to challenge friends, MindSpark offers a wide range of quiz options to suit every interest and learning style.</p>
+            <p>We believe learning should never be boring! With MindSpark, you can create personalized quizzes, compete with friends, and track your learning progress all in one place. From science to entertainment, we have quizzes on topics you love.</p>
+            <h3>Features of MindSpark</h3>
+            <p>MindSpark is packed with features that make learning and quiz-taking a fun and rewarding experience:</p>
+            <ul>
+                <li><strong>Create Custom Quizzes:</strong> Tailor your quizzes to your interests or educational needs. You can add various types of questions, including multiple choice, true/false, fill-in-the-blank, and more!</li>
+                <li><strong>Challenge Friends:</strong> Share your quizzes with friends and challenge them to take the quiz. Compare scores and see who knows more about a specific topic!</li>
+                <li><strong>Track Your Progress:</strong> Keep track of your scores and quiz history. See how your knowledge improves over time and challenge yourself to beat your previous scores.</li>
+                <li><strong>Fun Learning Experience:</strong> Engage with learning through quizzes on a variety of subjects, including history, literature, sports, geography, music, and more!</li>
+                <li><strong>Time Limits for Added Challenge:</strong> For those who like to feel the pressure, you can set time limits for each question or the entire quiz. Race against the clock to see how quickly you can answer!</li>
+                <li><strong>Real-Time Feedback:</strong> Get instant feedback on your answers. Learn why certain answers are correct or incorrect and improve your knowledge along the way.</li>
+                <li><strong>Mobile-Friendly:</strong> MindSpark is designed to work seamlessly on all devices. Whether you’re on your phone, tablet, or desktop, you’ll always have access to the best quiz experience.</li>
+                <li><strong>Leaderboard:</strong> Track how well you’re doing compared to others. Our leaderboard feature lets you see where you stand among your friends or the entire MindSpark community!</li>
+                <li><strong>Social Media Sharing:</strong> Share your quiz results with your social media followers. Let everyone know what you scored and challenge them to try the quiz for themselves!</li>
+                <li><strong>Educational Resources:</strong> We provide helpful resources for users who want to expand their knowledge beyond quizzes. Access learning articles, tutorials, and recommended reading.</li>
+                <li><strong>Quiz Categories:</strong> MindSpark offers a wide variety of categories so you can quiz yourself on subjects you love. Choose from topics such as Science, History, Geography, Sports, Pop Culture, Music, Literature, and more!</li>
+                <li><strong>Customizable Themes:</strong> Make your quiz-taking experience even more enjoyable by choosing from a variety of customizable themes and backgrounds. Create a visually appealing quiz with different styles!</li>
+            </ul>
+        
+            <h3>Why Choose MindSpark?</h3>
+            <p>At MindSpark, we believe in providing a platform that blends education with fun. Here’s why you should choose MindSpark:</p>
+            <ul>
+                <li><strong>Interactive Learning:</strong> MindSpark’s interactive quizzes help users engage with learning in a new and dynamic way. With a variety of questions and formats, you’ll never get bored.</li>
+                <li><strong>Comprehensive Content:</strong> Our quizzes cover a wide range of subjects, from academic topics to pop culture, ensuring there’s something for everyone.</li>
+                <li><strong>Play Anytime, Anywhere:</strong> Take quizzes whenever you have time—whether you're commuting, waiting in line, or relaxing at home. MindSpark is available across all devices for easy access on the go.</li>
+                <li><strong>Personalized Experience:</strong> Your learning path is unique. MindSpark lets you choose what topics you want to explore, challenge yourself, and track your growth.</li>
+                <li><strong>Learning Made Social:</strong> Connect with your friends and make learning a social experience. Share your results, compare scores, and make learning more competitive and fun!</li>
+            </ul>
+        
+            <h3>Upcoming Features</h3>
+            <p>We are continuously improving MindSpark to make your experience even better. Here’s a sneak peek at what we’re working on:</p>
+            <ul>
+                <li><strong>AI-Powered Recommendations:</strong> MindSpark will soon recommend quizzes based on your past quiz history and learning interests. Get personalized quiz suggestions to help you learn even more!</li>
+                <li><strong>Quiz Creation Templates:</strong> For those who want to quickly create a quiz, we’ll be adding ready-to-use templates for different subjects. Simply choose your template, add questions, and you’re good to go!</li>
+                <li><strong>Multi-Player Mode:</strong> Soon, you’ll be able to play quizzes with multiple friends at once. Race against your friends to see who can answer the most questions correctly in the shortest time!</li>
+                <li><strong>Achievements and Badges:</strong> Earn badges and achievements as you complete quizzes. Unlock special rewards for reaching milestones, like completing a certain number of quizzes or scoring high on specific topics.</li>
+            </ul>
+        
+            <h3>Join Us Today!</h3>
+            <p>Are you ready to make learning fun? Join MindSpark today and dive into a world of quizzes, challenges, and endless opportunities for learning. Whether you're preparing for exams or just having fun with friends, MindSpark is your go-to quiz platform!</p>
+        
+            <button onclick="showSection('home')">Back to Home</button>
+        </section>
+        
+       <!-- How to Create Section -->
+<section id="howToCreate" class="content hidden">
+    <h2>How to Create a Quiz</h2>
+    <p>Creating a quiz is not only a fun way to test knowledge but also a great way to engage your friends, family, and colleagues. Follow these simple steps to create your own quiz that anyone can enjoy!</p>
+    <ol>
+        <li><strong>Click "Create Quiz".</strong> This will take you to the quiz creation page. You'll find an easy-to-use form where you can start entering all the details of your quiz.</li>
+        <li><strong>Enter a Title.</strong> Your title should reflect the theme of your quiz. Be sure to make it catchy! For example, you could create quizzes like "Ultimate Harry Potter Quiz," "Are You a Math Genius?", or "Test Your General Knowledge!"</li>
+        <li><strong>Add Questions.</strong> You can add any number of questions, but we recommend between 10-15 questions for a balanced quiz. Each question should have four multiple-choice options, where one is the correct answer.</li>
+        <li><strong>Customize Answer Options.</strong> Make your questions as engaging as possible by varying your answer options. For example, if your question is “What is the capital of France?”, your options could include "Paris," "Berlin," "Madrid," and "Rome." The more varied and relevant the options, the more challenging it becomes for quiz-takers.</li>
+        <li><strong>Select Correct Answers.</strong> For each question, identify the correct answer by selecting its corresponding number. Ensure your options are accurate and fair. For example, in the question "What is 5 + 7?" the correct answer would be 12, so you’d select the option with 12 as the correct answer.</li>
+        <li><strong>Preview Your Quiz.</strong> Before saving, preview your quiz to see how it looks. Ensure your questions make sense, your answers are correct, and the layout is user-friendly. If anything feels off, you can easily edit it before you save the quiz.</li>
+        <li><strong>Save Your Quiz.</strong> Once you’re happy with your quiz, click the "Save" button. Your quiz will be stored in the system and available for others to take.</li>
+        <li><strong>Share Your Quiz.</strong> Share your quiz on social media platforms, via email, or directly with friends using a link. The more people you challenge, the more fun the quiz becomes! You can also embed your quiz on blogs or websites if you wish.</li>
+        <li><strong>Track Results.</strong> If your quiz platform supports it, you can track how well others are doing. See who scored the highest, compare answers, and see who’s truly the expert in a particular topic!</li>
+        <li><strong>Get Feedback.</strong> Once people have taken your quiz, ask them for feedback. This can help you improve future quizzes and make them more enjoyable and educational.</li>
+    </ol>
+
+    <p>In addition to the basic steps, here are some extra tips and features you can use to make your quiz creation experience even better:</p>
+    <ul>
+        <li><strong>Include Hints.</strong> For more complex questions, you can include hints to guide users. For example, if you’re asking a science question, a hint could be “It’s known as the Red Planet.” This makes the quiz more educational!</li>
+        <li><strong>Randomize Question Order.</strong> If you want to make your quiz more challenging, enable the option to randomize the order of questions and answers. This will keep people from memorizing the answers and give everyone a unique experience.</li>
+        <li><strong>Use Media for Engagement.</strong> Enhance your quiz by adding images, GIFs, or videos to your questions. For example, you could ask, "Which country is this flag from?" and include an image of the flag. Visual cues help people connect with the questions better.</li>
+        <li><strong>Categories & Tags.</strong> You can add categories to your quiz, like "Science," "History," "Sports," or "Movies." This helps users find quizzes based on their interests and encourages them to explore more topics!</li>
+        <li><strong>Consider Time Limits.</strong> If you want to add pressure and excitement, add a timer for each question or for the whole quiz. For example, users might have 30 seconds to answer each question or 5 minutes to complete the entire quiz.</li>
+        <li><strong>Randomize Answer Choices.</strong> To prevent users from guessing based on the order of answers, randomize the position of answer choices for each question. This makes the quiz even more fun and prevents people from memorizing the positions of correct answers.</li>
+        <li><strong>Allow Multiple Attempts.</strong> Enable quiz-takers to take your quiz multiple times. You can offer rewards or a "badge" for scoring 100% on their second or third attempt.</li>
+        <li><strong>Use Feedback for Incorrect Answers.</strong> Provide explanations or correct answers when someone chooses an incorrect answer. For example, if someone answers incorrectly, you could show them a fact about the topic and explain why the correct answer is right.</li>
+    </ul>
+
+    <h3>Best Practices for Creating a Quiz</h3>
+    <p>To ensure your quiz is not only fun but also valuable, here are some best practices:</p>
+    <ul>
+        <li><strong>Keep It Clear & Concise.</strong> Avoid over-complicating your questions. Simple, straightforward questions are best. If a question is too long or unclear, participants might get confused.</li>
+        <li><strong>Vary Question Types.</strong> If your platform allows it, try mixing up different question types, like true/false questions, fill-in-the-blank, or matching questions. This adds variety and keeps quiz-takers engaged.</li>
+        <li><strong>Test Your Own Quiz.</strong> Before you share it with others, make sure to take your own quiz to check for errors. This will ensure that everything is functioning correctly, from questions to answer selection.</li>
+        <li><strong>Make It Fun!</strong> Ultimately, quizzes are about fun and learning. Don't be afraid to get creative with your questions and themes. The more enjoyable and interactive your quiz is, the more likely people are to share it with others!</li>
+    </ul>
+
+    <h3>Quiz Ideas to Get You Started</h3>
+    <p>If you’re unsure where to start, here are some quiz ideas to help spark your creativity:</p>
+    <ul>
+        <li><strong>Pop Culture Quiz:</strong> Test knowledge about celebrities, movies, TV shows, and music.</li>
+        <li><strong>Geography Quiz:</strong> Ask about capitals, countries, landmarks, and famous cities.</li>
+        <li><strong>Science Quiz:</strong> Challenge users on topics like biology, chemistry, physics, and space.</li>
+        <li><strong>History Quiz:</strong> Include questions about historical events, figures, and famous dates.</li>
+        <li><strong>Personality Quiz:</strong> Create a quiz to help people discover their personalities, for example, “What type of learner are you?” or “Which superhero are you most like?”</li>
+    </ul>
+
+    <button onclick="showSection('home')">Back to Home</button>
+</section>
+
+
+       <!-- Sample Quiz Section -->
+<section id="sampleQuiz" class="content hidden">
+    <h2>Sample Quiz: Test Your Knowledge!</h2>
+    <p>Are you ready to challenge yourself? Try this fun and engaging sample quiz to test your general knowledge!</p>
+    <p>Answer the questions below and check how many you got right!</p>
+    <center>
+    <!-- Question 1 -->
+    <div class="question">
+        <p><strong>Question 1:</strong> What is the capital of France?</p>
+        <ul>
+            <li><label><input type="radio" name="q1" value="A"> A. Berlin</label></li>
+            <li><label><input type="radio" name="q1" value="B"> B. Madrid</label></li>
+            <li><label><input type="radio" name="q1" value="C"> C. Paris</label></li>
+            <li><label><input type="radio" name="q1" value="D"> D. Rome</label></li>
+        </ul>
+    </div>
+
+    <!-- Question 2 -->
+<div class="question">
+    <p><strong>Question 2:</strong> Who wrote "Romeo and Juliet"?</p>
+    <ul>
+        <li><label><input type="radio" name="q2" value="A"> A. William Shakespeare</label></li>
+        <li><label><input type="radio" name="q2" value="B"> B. Charles Dickens</label></li>
+        <li><label><input type="radio" name="q2" value="C"> C. Jane Austen</label></li>
+        <li><label><input type="radio" name="q2" value="D"> D. Mark Twain</label></li>
+    </ul>
+</div>
+
+<!-- Question 3 -->
+<div class="question">
+    <p><strong>Question 3:</strong> What is the largest planet in our solar system?</p>
+    <ul>
+        <li><label><input type="radio" name="q3" value="A"> A. Earth</label></li>
+        <li><label><input type="radio" name="q3" value="B"> B. Jupiter</label></li>
+        <li><label><input type="radio" name="q3" value="C"> C. Mars</label></li>
+        <li><label><input type="radio" name="q3" value="D"> D. Venus</label></li>
+    </ul>
+</div>
+
+<!-- Question 4 -->
+<div class="question">
+    <p><strong>Question 4:</strong> What is the chemical symbol for water?</p>
+    <ul>
+        <li><label><input type="radio" name="q4" value="A"> A. O</label></li>
+        <li><label><input type="radio" name="q4" value="B"> B. H2O</label></li>
+        <li><label><input type="radio" name="q4" value="C"> C. CO2</label></li>
+        <li><label><input type="radio" name="q4" value="D"> D. H2</label></li>
+    </ul>
+</div>
+
+<!-- Question 5 -->
+<div class="question">
+    <p><strong>Question 5:</strong> Which ocean is the largest?</p>
+    <ul>
+        <li><label><input type="radio" name="q5" value="A"> A. Atlantic Ocean</label></li>
+        <li><label><input type="radio" name="q5" value="B"> B. Indian Ocean</label></li>
+        <li><label><input type="radio" name="q5" value="C"> C. Arctic Ocean</label></li>
+        <li><label><input type="radio" name="q5" value="D"> D. Pacific Ocean</label></li>
+    </ul>
+</div>
+
+<!-- Question 6 -->
+<div class="question">
+    <p><strong>Question 6:</strong> What is the boiling point of water?</p>
+    <ul>
+        <li><label><input type="radio" name="q6" value="A"> A. 50°C</label></li>
+        <li><label><input type="radio" name="q6" value="B"> B. 100°C</label></li>
+        <li><label><input type="radio" name="q6" value="C"> C. 200°C</label></li>
+        <li><label><input type="radio" name="q6" value="D"> D. 150°C</label></li>
+    </ul>
+</div>
+
+<!-- Question 7 -->
+<div class="question">
+    <p><strong>Question 7:</strong> Who painted the Mona Lisa?</p>
+    <ul>
+        <li><label><input type="radio" name="q7" value="A"> A. Vincent van Gogh</label></li>
+        <li><label><input type="radio" name="q7" value="B"> B. Leonardo da Vinci</label></li>
+        <li><label><input type="radio" name="q7" value="C"> C. Pablo Picasso</label></li>
+        <li><label><input type="radio" name="q7" value="D"> D. Claude Monet</label></li>
+    </ul>
+</div>
+
+</center>
+    <!-- Submit Button -->
+    <button onclick="submitSampleQuiz()">Submit Quiz</button>
+
+    <p id="quizResult" class="hidden"></p>
+
+    <!-- Back to Home -->
+    <button onclick="showSection('home')">Back to Home</button>
+</section>
+
+<!-- Create Quiz Section -->
+<section id="createQuiz" class="content hidden">
+    <h2>Create Your Quiz</h2>
+    <p>Welcome to the quiz creation tool! Follow the steps below to create your custom quiz and share it with your friends!</p>
+    
+    <!-- Quiz Creation Form -->
+    <form id="quizForm">
+        <div class="quiz-header">
+            <input type="text" placeholder="Enter Quiz Title" required id="quizTitle" class="quiz-title-input">
+            <p>Choose a category for your quiz:</p>
+            <select id="quizCategory" required>
+                <option value="generalKnowledge">General Knowledge</option>
+                <option value="science">Science</option>
+                <option value="history">History</option>
+                <option value="technology">Technology</option>
+                <option value="entertainment">Entertainment</option>
+            </select>
+        </div>
+
+        <!-- Questions Container -->
+        <div id="questionsContainer">
+            <!-- Dynamic question addition will go here -->
+        </div>
+
+        <!-- Add and Review Buttons -->
+        <div class="form-actions">
+            <button type="button" onclick="addQuestion()" class="btn">Add Question</button>
+            <button type="button" onclick="reviewQuiz()" class="btn btn-review">Review Quiz</button>
+            <button type="submit" class="btn btn-submit">Save Quiz</button>
+        </div>
+    </form>
+
+    <div id="reviewSection" class="hidden">
+        <h3>Review Your Quiz</h3>
+        <p>Here’s a summary of the quiz you’re about to create. Please check the details before saving!</p>
+        
+        <div id="reviewQuizContent"></div>
+        
+        <div class="review-actions">
+            <button onclick="goBackToEdit()" class="btn btn-edit">Edit Quiz</button>
+            <button onclick="submitQuiz()" class="btn btn-confirm">Confirm and Save</button>
+        </div>
+    </div>
+
+    <button onclick="showSection('home')" class="btn btn-back">Back to Home</button>
+</section>
+
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MindSpark. All rights reserved.</p>
+        <p>Follow us on <a href="#">Facebook</a>, <a href="#">Twitter</a>, <a href="#">Instagram</a>.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        function toggleAuth(authType) {
+            document.getElementById('login').classList.toggle('hidden', authType !== 'login');
+            document.getElementById('register').classList.toggle('hidden', authType !== 'register');
+        }
+
+        function addQuestion() {
+            const container = document.getElementById('questionsContainer');
+            const questionDiv = document.createElement('div');
+            questionDiv.innerHTML = `
+                <input type="text" placeholder="Question" required>
+                <input type="text" placeholder="Option 1" required>
+                <input type="text" placeholder="Option 2" required>
+                <input type="text" placeholder="Option 3">
+                <input type="text" placeholder="Option 4">
+                <select required>
+                    <option value="" disabled selected>Select Correct Answer</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                </select>
+            `;
+            container.appendChild(questionDiv);
+        }
+    </script>
+</body>
+</html>

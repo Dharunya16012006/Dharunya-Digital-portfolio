@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Platform</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <header>
+        <h1>TalentQuestor</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#post-job">Post a Job</a>
+            <a href="#about">About</a>
+
+        </nav>
+        
+          
+    </header>
+<center >   
+    <!-- Button and Pop-Up -->
+<button id="popUpButton">Click Me</button>
+
+<!-- Pop-Up Message -->
+<div id="popUp" class="pop-up">
+  <div class="pop-up-content">
+    <span class="close">&times;</span>
+    <h3>Ready, Set, Grow</h3>
+    <p>Get Ready to Shine! Browse our latest job postings and take the first step towards your future!</p>
+  </div>
+</div>
+
+    <!-- Home Section -->
+    <section id="home" class="section welcome-message">
+        <h2>Welcome to Our Job Application Platform!</h2>
+        <p>Your one-stop solution for job applications and postings. <br>Whether you're a job seeker or an employer, our platform helps you connect, apply, and post job opportunities with ease. <br>Join us today and take your career to the next level.</p>
+        
+        <h3>Why Choose Us?</h3>
+        <p>We offer a simple and intuitive interface, real-time notifications, and the ability to upload resumes and<br> cover letters, ensuring that job seekers and employers alike have a seamless experience.<br> Get started today and find your next job opportunity!</p>
+
+        <h3>How It Works</h3>
+        <p>1. Job Seekers: Browse available job listings, apply to jobs that match your skills, and upload your resume.</p>
+        <p>2. Employers: Post job openings, review applications, and connect with qualified candidates instantly.</p>
+
+        <h3>Testimonials</h3>
+        <p>"This platform has helped me land my dream job! The process was simple, and I loved the easy resume upload feature." - Jane Doe, Software Engineer</p>
+        <p>"As an employer, I found this platform extremely easy to use for posting jobs and finding qualified candidates." - John Smith, Tech Solutions</p>
+    </section>
+</center>
+    <!-- Job Listings Section -->
+<section id="jobs" class="section">
+    <h2>Job Listings</h2>
+    <div id="job-listings" class="job-listings">
+        <!-- Welcome Message Section -->
+        <div id="content">
+            <h1>Welcome to the Job Board</h1>
+            <p>Find your perfect job match here!</p>
+        </div>
+        
+        <!-- Example Job Card with Apply and Save Buttons -->
+        <div class="job-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWD75qVAnyPgLYqoRpw2j3k-9ZOz9s4MLF7g&s" alt="Job Image">
+            <h3>Software Developer</h3>
+            <p>Join our innovative software development team.</p>
+            <button class="apply-button">Apply</button>
+            <button class="save-button">Save</button>
+        </div>
+
+        <div class="job-card">
+            <h3>Web Developer</h3>
+            <p><strong>Company:</strong> Digital Creatives</p>
+            <p><strong>Location:</strong> San Francisco</p>
+            <p><strong>Description:</strong> Join our creative team to develop modern, dynamic websites for our clients.</p>
+            <button class="apply-button">Apply</button>
+            <button class="save-button">Save</button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Post Job Section -->
+    <section id="post-job" class="section">
+        <h2>Post a Job</h2>
+        <form id="job-form" class="job-form">
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="title" placeholder="Job Title" required>
+
+            <label for="company">Company:</label>
+            <input type="text" id="company" placeholder="Company" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Location" required>
+
+            <label for="description">Job Description:</label>
+            <textarea id="description" placeholder="Job Description" required></textarea>
+
+            <label for="image">Job Image URL:</label>
+            <input type="text" id="image" placeholder="Image URL" required>
+
+            <button type="submit">Post Job</button>
+        </form>
+
+        <h3>Upload Resume</h3>
+        <input type="file" id="resume" accept=".pdf,.doc,.docx">
+    </section>
+
+   <!-- About Section -->
+<section id="about" class="section features-list">
+ <center>
+    <h2>About Us</h2>
+    <p>We are dedicated to connecting job seekers with employers in a streamlined, user-friendly way. <br>Whether you’re looking for a new job or looking to hire, our platform is designed to make the process faster and easier.</p>
+    
+    <h3>Our Mission</h3>
+    <p>Our mission is to create a platform where job seekers and employers can find the best matches quickly and efficiently.<br> We strive to create an environment where job applications are streamlined and all the necessary tools are at your fingertips.</p>
+
+    <h3>Key Features:</h3>
+    <p>Our platform offers an easy job posting and application process, ensuring that both job seekers and employers can connect seamlessly. <br>It features a user-friendly interface for job seekers to browse listings, apply for jobs, and upload their resumes and cover letters directly.<br> Job seekers receive real-time notifications for job updates, so they never miss out on any opportunities. <br>The mobile responsive design allows users to access the platform from any device, making it convenient to apply or post jobs on the go.<br> Advanced search filters are available to help job seekers find jobs that match their skills and preferences,<br> while employers benefit from a dashboard to easily review applicants and manage job postings.</p>
+
+    <h3>Our Vision</h3>
+    <p>Our vision is to become the leading platform for job applications worldwide, simplifying the hiring process for both employers and job seekers.<br> We aim to ensure that every user, whether applying or hiring, has a great experience with a streamlined, efficient process.<br> With our platform, we are transforming the way job applications are made, and helping users get closer to their career goals.</p>
+
+    <h3>Join Us Today!</h3>
+    <p>Sign up now to start browsing jobs, posting opportunities, and connecting with the best talent or employers in your industry.<br> Together, we can make the world of job applications better and more efficient!</p>
+</center>
+</section>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Job Application Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="index2.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>
+

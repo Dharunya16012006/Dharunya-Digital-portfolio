@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharunya's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #121212;
+            color: #f0f0f0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 111, 97, 0.6);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+            box-shadow: 0 0 20px rgba(255, 111, 97, 0.8);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            20% { opacity: 1; }
+            100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+        }
+
+        /* Navbar */
+        nav {
+            background: rgba(18, 18, 18, 0.9);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 111, 97, 0.3);
+            z-index: 1000;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6f61, #ff4b2b);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        /* Sections */
+        section {
+            padding: 120px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,111,97,0.1) 0%, rgba(18,18,18,0) 70%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        section:hover::before {
+            opacity: 1;
+        }
+
+        section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff6f61, #ff4b2b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(255, 111, 97, 0.3);
+            animation: textGlow 3s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 10px rgba(255, 111, 97, 0.3); }
+            100% { text-shadow: 0 0 30px rgba(255, 111, 97, 0.6); }
+        }
+
+        section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        /* Content Cards */
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: rgba(30, 30, 30, 0.8);
+            padding: 30px;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 111, 97, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 111, 97, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 111, 97, 0.3);
+            border-color: rgba(255, 111, 97, 0.4);
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #ff6f61;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Links */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: inline-block;
+        }
+
+        /* Download Button */
+        .download-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #ff6f61, #ff4b2b);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            box-shadow: 0 5px 20px rgba(255, 111, 97, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 111, 97, 0.6);
+        }
+
+        .download-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Contact Icons */
+        .contact-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-icons a {
+            color: #f0f0f0;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-icons a:hover {
+            color: #ff6f61;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 30px;
+            background: rgba(18, 18, 18, 0.9);
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 111, 97, 0.2);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            section h1 {
+                font-size: 2.5rem;
+            }
+            
+            section p {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+            
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle" style="left: 10%; animation-duration: 12s; animation-delay: 0s;"></div>
+        <div class="particle" style="left: 30%; animation-duration: 15s; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 50%; animation-duration: 18s; animation-delay: 4s;"></div>
+        <div class="particle" style="left: 70%; animation-duration: 14s; animation-delay: 1s;"></div>
+        <div class="particle" style="left: 90%; animation-duration: 16s; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 20%; animation-duration: 13s; animation-delay: 5s;"></div>
+        <div class="particle" style="left: 40%; animation-duration: 17s; animation-delay: 2s;"></div>
+        <div class="particle" style="left: 60%; animation-duration: 11s; animation-delay: 3s;"></div>
+        <div class="particle" style="left: 80%; animation-duration: 19s; animation-delay: 1s;"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="dharu resume.pdf">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>Dharunya Mahalakshmi B</h1>
+        <p>Computer Science Student | Cybersecurity Enthusiast | Web Developer</p>
+        <div class="content">
+            <div class="card">
+                <h3>Innovative Solutions</h3>
+                <p>Creating elegant and efficient digital experiences</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Hi, I'm Dharunya Mahalakshmi B, a passionate  B.Sc Computer Science student with a keen interest in cybersecurity, AI, web development, cloud computing, and networking. I thrive on solving complex problems and bringing innovative ideas to life through code. With a strong foundation in programming and a curiosity to explore emerging technologies, I am always eager to learn, build, and contribute to impactful projects. Whether it's developing secure web applications, experimenting with AI models, or understanding cloud infrastructures, I love pushing my limits and growing as a tech enthusiast.</p>
+        <div class="content">
+            <div class="card">
+                <h3><i class="fas fa-code"></i> Development</h3>
+                <p>Building responsive and interactive web applications</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-shield-alt"></i> Cybersecurity</h3>
+                <p>Researching and implementing security solutions</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-brain"></i> AI & ML</h3>
+                <p>Exploring artificial intelligence and machine learning</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-brain"></i> cloud </h3>
+                <p>Diving into the world of cloud computing and networking</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+        <p>Some of my recent projects and accomplishments</p>
+        <div class="content">
+            <a href="index.html" class="card-link">
+                <div class="card">
+                    <h3><i class="fas fa-briefcase"></i> Digital Portfolio</h3>
+                    <p>A showcase of my work and achievements</p>
+                </div>
+            </a>
+           
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h1>My Resume</h1>
+        <p>Download my resume to learn more about my skills and experience</p>
+        <a href="dharu resume.pdf" class="download-btn" download>
+            <i class="fas fa-download"></i> Download Resume
+        </a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Get In Touch</h1>
+        <p>Feel free to reach out for collaborations or just to say hello!</p>
+        <div class="contact-icons">
+            <a href="mailto:dharunyamahalakshmi.b@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="tel:7305850880"><i class="fas fa-phone"></i></a>
+            <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Dharunya16012006" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dharunya Mahalakshmi B. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Create additional particles dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.querySelector('.particles');
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = 10 + Math.random() * 15 + 's';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.width = (5 + Math.random() * 10) + 'px';
+                particle.style.height = particle.style.width;
+                particlesContainer.appendChild(particle);
+            }
+        });
+
+        // Add active class to nav links on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', function() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
